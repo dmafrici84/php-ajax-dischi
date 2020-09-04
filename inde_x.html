@@ -14,20 +14,16 @@
     <!-- Handlebars -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
     <!-- Template -->
-    <script id="template-film-serie" type="text/x-handlebars-template">
-      <li class="film">
-        <div class="copertina">
-          {{{poster_path}}}
+    <script id="template-brani" type="text/x-handlebars-template">
+      <div class="album">
+        <div class="album-img">
+          <a href="#"> <img src={{poster}} alt=""> </a>
+          <i class="far fa-play-circle"></i>
         </div>
-        <div class="info-film">
-          <span class="bianco">Titolo: <span>{{title}}{{name}}</span></span>
-          <span class="bianco">Titolo Originale: <span>{{original_title}}{{original_name}}</span></span>
-          <span class="bianco">Lingua Originale: <span>{{{original_language}}}</span></span>
-          <span class="bianco">Voto: <span>{{{vote_average}}}</span></span>
-          <span class="bianco">Cast: <span>{{{actor}}}</span></span>
-          <p>{{overview}}</p>
-        </div>
-      </li>
+        <a href="#"><strong>{{title}}</strong></a>
+        <p>{{author}}</p>
+        <p>{{year}}</p>
+      </div>
     </script>
     <!-- JavaScript -->
     <script type="text/javascript" src="script.js"></script>
@@ -44,98 +40,14 @@
     </header>
     <!-- BLOCCO MAIN -->
     <main>
-      <!-- BLOCCO COLONNA DI DESTRA -->
       <div class="contenitore">
         <!-- BLOCCO BRANI -->
-        <section id="brani" class="centratura">
-
-          <div class="layout-img">
-
-            <div class="album">
-
-              <div class="album-img">
-                <a href="#"> <img src="img/metal_lifting.jpg" alt=""> </a>
-                <i class="far fa-play-circle"></i>
-              </div>
-
-              <a href="#"><strong>Heavy Metal</strong></a>
-
-              <p>Subtitle</p>
-
-            </div>
-
-            <div class="album">
-
-              <div class="album-img">
-                <a href="#"> <img src="img/stranger.jpeg" alt=""> </a>
-                <i class="far fa-play-circle"></i>
-              </div>
-
-              <a href="#"><strong>Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</strong></a>
-
-              <p>Kyle Dixon &amp; Michael Stein</p>
-
-            </div>
-
-            <div class="album">
-
-              <div class="album-img">
-                <a href="#"> <img src="img/aquietplace.jpeg" alt=""> </a>
-                <i class="far fa-play-circle"></i>
-              </div>
-
-              <a href="#"><strong>A quit place</strong></a>
-
-              <p>Subtitle</p>
-
-            </div>
-
-            <div class="album">
-
-              <div class="album-img">
-                <a href="#"> <img src="img/split.jpeg" alt=""> </a>
-                <i class="far fa-play-circle"></i>
-              </div>
-
-              <a href="#"><strong>Split</strong></a>
-
-              <p>Subtitle</p>
-
-            </div>
-
-            <div class="album">
-
-              <div class="album-img">
-                <a href="#"> <img src="img/cure.jpeg" alt=""> </a>
-                <i class="far fa-play-circle"></i>
-              </div>
-
-              <a href="#"><strong>A cure for wellness</strong></a>
-
-              <p>Subtitle</p>
-
-            </div>
-
-            <div class="album">
-
-              <div class="album-img">
-                <a href="#"> <img src="img/sinister.jpeg" alt=""> </a>
-                <i class="far fa-play-circle"></i>
-              </div>
-
-              <a href="#"><strong>Sinister</strong></a>
-
-              <p>Subtitle</p>
-
-            </div>
+        <section class="centratura">
+          <div  id="brani" class="layout-img">
 
           </div>
-
         </section>
-
       </div>
-
     </main>
-
   </body>
 </html>

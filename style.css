@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+p {
+  color: #616467;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
+.centratura {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo a img {
+  width: 30px;
+}
+
+.contenitore {
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#brani {
+  margin-top: 50px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout-img {
+  padding-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.layout-img .album {
+  width: calc(90% / 3);
+  margin-right: 25px;
+  margin-bottom: 25px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-img .album:last-child {
+  margin-right: 0;
+}
+
+.layout-img .album .album-img {
+  width: 100%;
+  max-height: 90%;
+  position: relative;
+}
+
+.layout-img .album .album-img img {
+  max-height: 100%;
+  width: 100%;
+}
+
+.layout-img i {
+  display: none;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 50px;
+}
+
+.layout-img .album a:hover {
+  text-decoration: underline;
+}
+
+.layout-img .album .album-img:hover i {
+  display: block;
+  cursor: pointer;
+}
+
+.layout-img .album .album-img:hover img {
+  filter: grayscale(100%) opacity(50%);
+}

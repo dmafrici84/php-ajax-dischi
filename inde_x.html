@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>php-ajax-dischi</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!--scala e no zoom versione mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <!-- Template -->
+    <script id="template-film-serie" type="text/x-handlebars-template">
+      <li class="film">
+        <div class="copertina">
+          {{{poster_path}}}
+        </div>
+        <div class="info-film">
+          <span class="bianco">Titolo: <span>{{title}}{{name}}</span></span>
+          <span class="bianco">Titolo Originale: <span>{{original_title}}{{original_name}}</span></span>
+          <span class="bianco">Lingua Originale: <span>{{{original_language}}}</span></span>
+          <span class="bianco">Voto: <span>{{{vote_average}}}</span></span>
+          <span class="bianco">Cast: <span>{{{actor}}}</span></span>
+          <p>{{overview}}</p>
+        </div>
+      </li>
+    </script>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="centratura">
+        <div class="logo">
+          <a href="#">
+            <img src="img/logo-small.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- BLOCCO MAIN -->
+    <main>
+      <!-- BLOCCO COLONNA DI DESTRA -->
+      <div class="contenitore">
+        <!-- BLOCCO BRANI -->
+        <section id="brani" class="centratura">
+
+          <div class="layout-img">
+
+            <div class="album">
+
+              <div class="album-img">
+                <a href="#"> <img src="img/metal_lifting.jpg" alt=""> </a>
+                <i class="far fa-play-circle"></i>
+              </div>
+
+              <a href="#"><strong>Heavy Metal</strong></a>
+
+              <p>Subtitle</p>
+
+            </div>
+
+            <div class="album">
+
+              <div class="album-img">
+                <a href="#"> <img src="img/stranger.jpeg" alt=""> </a>
+                <i class="far fa-play-circle"></i>
+              </div>
+
+              <a href="#"><strong>Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</strong></a>
+
+              <p>Kyle Dixon &amp; Michael Stein</p>
+
+            </div>
+
+            <div class="album">
+
+              <div class="album-img">
+                <a href="#"> <img src="img/aquietplace.jpeg" alt=""> </a>
+                <i class="far fa-play-circle"></i>
+              </div>
+
+              <a href="#"><strong>A quit place</strong></a>
+
+              <p>Subtitle</p>
+
+            </div>
+
+            <div class="album">
+
+              <div class="album-img">
+                <a href="#"> <img src="img/split.jpeg" alt=""> </a>
+                <i class="far fa-play-circle"></i>
+              </div>
+
+              <a href="#"><strong>Split</strong></a>
+
+              <p>Subtitle</p>
+
+            </div>
+
+            <div class="album">
+
+              <div class="album-img">
+                <a href="#"> <img src="img/cure.jpeg" alt=""> </a>
+                <i class="far fa-play-circle"></i>
+              </div>
+
+              <a href="#"><strong>A cure for wellness</strong></a>
+
+              <p>Subtitle</p>
+
+            </div>
+
+            <div class="album">
+
+              <div class="album-img">
+                <a href="#"> <img src="img/sinister.jpeg" alt=""> </a>
+                <i class="far fa-play-circle"></i>
+              </div>
+
+              <a href="#"><strong>Sinister</strong></a>
+
+              <p>Subtitle</p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  </body>
+</html>

@@ -29,23 +29,32 @@
             include __DIR__ . "./partials/var.php";
 
             // var_dump ($data);
+            $author = $_GET["author"];
 
             foreach ($data as $value) {
                 foreach ($value as $element) {
-
-                  echo '<div class="album">
-                            <div class="album-img">
-                              <a href="#">
-                                <img src="' . $element['poster'] .'" alt="">
-                              </a>
-                              <i class="far fa-play-circle"></i>
-                            </div>
-                            <a href="#"><strong>'. $element["title"] . '</strong></a>
-                            <p>' . $element["author"] . '</p>
-
-                            <p>' . $element["year"] . '</p>
-                        </div>';
+                  if (count($_GET) < 1 ) {
+                    printDisco($element);
+                  }
+                  if (!is_null($author) && $author === $element['author']) {
+                    printDisco($element);
+                  }
               }
+            }
+
+            function printDisco($element) {
+              echo '<div class="album">
+                        <div class="album-img">
+                          <a href="#">
+                            <img src="' . $element['poster'] .'" alt="">
+                          </a>
+                          <i class="far fa-play-circle"></i>
+                        </div>
+                        <a href="#"><strong>'. $element["title"] . '</strong></a>
+                        <p>' . $element["author"] . '</p>
+
+                        <p>' . $element["year"] . '</p>
+                    </div>';
             }
 
           ?>
